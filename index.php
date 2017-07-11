@@ -44,6 +44,7 @@
                         <a class="btn btn-default" href="http://mamori017.hatenablog.com/" target="_blank">Hatena Blog &raquo;</a>
                         <a class="btn btn-default" href="https://twitter.com/mamori017" target="_blank">Twitter &raquo;</a>
                         <a class="btn btn-default" href="https://mamori017.slack.com/" target="_blank">Slack &raquo;</a>
+                        <a class="btn btn-default" href="https://8card.net/" target="_blank">Eight &raquo;</a>
                     </p>
                 </div>
 
@@ -52,10 +53,23 @@
                     <p>
                         <a class="btn btn-default" href="https://console.aws.amazon.com/" target="_blank">AWS &raquo;</a>
                         <a class="btn btn-default" href="https://portal.azure.com/" target="_blank">Azure &raquo;</a>
-                        <a class="btn btn-default" href="https://id.heroku.com/login" target="_blank">Heroku &raquo;</a>                   
+                        <a class="btn btn-default" href="https://id.heroku.com/login" target="_blank">Heroku &raquo;</a>
+                        <a class="btn btn-default" href="https://mackerel.io/ja/" target="_blank">Mackerel &raquo;</a>
+                        <a class="btn btn-default" href="https://www.datadoghq.com/" target="_blank">Datadog &raquo;</a>                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>Etc</h3>
+                    <p>
+                        <a class="btn btn-default" href="https://outlook.live.com" target="_blank">Outlook &raquo;</a>
                     </p>
                 </div>
             </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="github-card" data-user="mamori017"></div>
+            <script src="http://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
         </div>
 
         <div class="col-md-4">
@@ -66,10 +80,10 @@
         </div>
 
 
-        <footer class="text-center">
+    </div>
+            <footer class="text-center">
             <p>&copy; 2017 mamori017</p>
         </footer>
-    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
