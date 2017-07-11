@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,63 +16,52 @@
     <div class="jumbotron">
         <img src="images/logo.png" class="center-block img-responsive"/>
     </div>
-    
+    <?php
+        require('common/common.php');
+        $conn = connect(); 
+        if( !$conn ) {
+            print "Connection error.<br />";
+            die( print_r( sqlsrv_errors(), true));
+        }
+    ?>        
     <div class="container">
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <h3>Repository</h3>
-                    <p>
-                        <a class="btn btn-default" href="https://bitbucket.org/" target="_blank">BitBucket &raquo;</a>
-                        <a class="btn btn-default" href="https://github.com/mamori017" target="_blank">GitHub &raquo;</a>
-                    </p>
+                <div class="col-xs-4">
+                    <h4>Repository</h4>
+                    <?php getData($conn,0); ?>
                 </div>
 
-                <div class="col-md-6">
-                    <h3>Schedule</h3>
-                    <p>
-                        <a class="btn btn-default" href="https://mamori017.backlog.jp/" target="_blank">Backlog &raquo;</a>
-                        <a class="btn btn-default" href="https://brabioproject.appspot.com/account/login/" target="_blank">Brabio! &raquo;</a>
-                    </p>
+                <div class="col-xs-4">
+                    <h4>Schedule</h4>
+                    <?php getData($conn,1); ?>
                 </div>
 
-                <div class="col-md-6">
-                    <h3>Social</h3>
-                    <p>
-                        <a class="btn btn-default" href="http://booklog.jp/users/mamori017" target="_blank">BookLog &raquo;</a>
-                        <a class="btn btn-default" href="http://mamori017.hatenablog.com/" target="_blank">Hatena Blog &raquo;</a>
-                        <a class="btn btn-default" href="https://twitter.com/mamori017" target="_blank">Twitter &raquo;</a>
-                        <a class="btn btn-default" href="https://mamori017.slack.com/" target="_blank">Slack &raquo;</a>
-                        <a class="btn btn-default" href="https://8card.net/" target="_blank">Eight &raquo;</a>
-                    </p>
+                <div class="col-xs-4">
+                    <h4>Social</h4>
+                    <?php getData($conn,2); ?>
                 </div>
 
-                <div class="col-md-6">
-                    <h3>XaaS</h3>
-                    <p>
-                        <a class="btn btn-default" href="https://console.aws.amazon.com/" target="_blank">AWS &raquo;</a>
-                        <a class="btn btn-default" href="https://portal.azure.com/" target="_blank">Azure &raquo;</a>
-                        <a class="btn btn-default" href="https://id.heroku.com/login" target="_blank">Heroku &raquo;</a>
-                        <a class="btn btn-default" href="https://mackerel.io/ja/" target="_blank">Mackerel &raquo;</a>
-                        <a class="btn btn-default" href="https://www.datadoghq.com/" target="_blank">Datadog &raquo;</a>                    </p>
+                <div class="col-xs-4">
+                    <h4>XaaS</h4>
+                    <?php getData($conn,3); ?>
                 </div>
 
-                <div class="col-md-6">
-                    <h3>Etc</h3>
-                    <p>
-                        <a class="btn btn-default" href="https://outlook.live.com" target="_blank">Outlook &raquo;</a>
-                    </p>
+                <div class="col-xs-4">
+                    <h4>Etc</h4>
+                    <?php getData($conn,4); ?>
                 </div>
             </div>
         </div>
-
+        <?php $conn = null; ?>
         <div class="col-md-4">
+            <h4>GitHub</h4>
             <div class="github-card" data-user="mamori017"></div>
             <script src="http://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
         </div>
 
         <div class="col-md-4">
-            <h3>Timeline</h3>
+            <h4>Timeline</h4>
             <p>
                <a class="twitter-timeline" href="https://twitter.com/mamori017">Tweets by mamori017</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </p>
