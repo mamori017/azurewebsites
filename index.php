@@ -25,6 +25,9 @@
         }
     ?>        
     <div class="container">
+        <div class="col-md-12 text-right">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mamori017.azurewebsites.net/" data-text="Test tweet" data-size="default" data-hashtags="mamori017dev">Tweet</a>
+        </div>
         <div class="col-md-8">
             <div class="row">
                 <div class="col-xs-4">
@@ -66,12 +69,11 @@
                <a class="twitter-timeline" href="https://twitter.com/mamori017">Tweets by mamori017</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </p>
         </div>
-
-
     </div>
-            <footer class="text-center">
-            <p>&copy; 2017 mamori017</p>
-        </footer>
+    <footer class="text-center">
+        <p>&copy; 2017 mamori017</p>
+    </footer>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
