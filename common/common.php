@@ -1,15 +1,15 @@
 <?php
     function connect(){
         $tcp = getenv('SQLAZURECONNSTR_TCP');
-        $id = getenv('SQLAZURECONNSTR_ID');
-        $pw = getenv('SQLAZURECONNSTR_PASSWORD');
-        $ct = getenv('SQLAZURECONNSTR_CATALOG');
-        $conn = new PDO( "sqlsrv:server=$tcp;Database = $ct", $id, $pw);
+        $uid = getenv('SQLAZURECONNSTR_ID');
+        $pwd = getenv('SQLAZURECONNSTR_PASSWORD');
+        $clg = getenv('SQLAZURECONNSTR_CATALOG');
+        $conn = new PDO( "sqlsrv:server=$tcp;Database = $clg", $uid, $pwd);
         return $conn;
     }
 
-    function getData($conn,$id){
-        $sql = "SELECT name, url, id, category FROM dbo.view_details where id ='" . $id ."'";
+    function getData($conn,$uid){
+        $sql = "SELECT name, url, id, category FROM dbo.view_details where id ='" . $uid ."'";
         foreach ($conn->query($sql) as $row) {
             print("<p><a href='" . $row['url'] . "' target='_blank'>" . $row['name'] . " &raquo;</a></p>");
         }
